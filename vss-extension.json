@@ -1,7 +1,7 @@
 {
     "id": "vsts-inno-setup-extension",
     "name": "Inno Setup Build Task",
-    "version": "5.5.9",
+    "version": "5.6.0",
     "description": "Tasks for running Inno Setup scripts to produce installers.",
     "categories": [
         "Build and release"
