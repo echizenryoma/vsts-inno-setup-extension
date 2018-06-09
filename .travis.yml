@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - "lts/*"
+before_script:
+  - cp -Rf ispack/isfiles-unicode/* inno-setup
+  - mkdir -p inno-setup/Languages
+  - cp -f issrc/Files/Languages/Unofficial/* inno-setup/Languages
+  - rm -rf inno-setup/Examples
+  - npm install -g tfx-cli
+script:
+  - tfx extension create --manifest-globs vss-extension.json
+deploy:
+  provider: releases
+  api_key:
+    secure: "YKQncZYEGv/apvyGwG+i6V8LjIGyZBVIWNwYByj/28kG/G/PJnoqv8+SP6LGHCzCtVmr9Zx+2HKdiVy1tla6lvPxbs9HEGhs1Wz/RGWHw6t/X3IYXAZ0gpgO3kHE+ViMRXlIKUDLGRlPXYwJb0wiO0YayEPvWeMQj2Op/AG0ScWfiyf5z1CQTdH1po4YDv4o/rDL4Ncd9CD8cvLifyh3A40P1YtbNk6mYsrTMG3rYNk87zt3UNnuieZppM9zLoA3G4rwBrxk7L+e8qgN0082GKdRtHnkAjVx1R6U8u3ZM457/VZKN6TdL5EDfoIiNuj5vnw7qvd+p05P/pLcdKFfc5lLITBvZ5eN1DLfwLvgpDQQ2mjwx3Os5ZjVEhuw2UVvr38A2rRGhF/iFClZ0aeZYAwSCLJdjQLPh5mzn5GGx8RWH9TF/yyHXVu0oRGcEuOPTBM976PqtE6K3JJl0BPo2pMO6uBuZJqW8hqDCEY4iKC8Xu3pybkOvnB8j/6uJLjs7lJtroj3e0Of6Z2JGu/hmUiBs6Ge8d7GeMV6oP8yHVae52X/YpQcUVVFnIFxnHU9kCR4/ETsvyrGi1PV2XmXq0KAlHCTO5EEQ4dALYXv/C8l98j4S+Bygn/R6v0YX3b64XW9SyGLYlU9l5ImIoz8pD6TggeTYlVXO4kJo+WQBVU="
+  file: echizenryoma.vsts-inno-setup-extension-*.vsix
+  file_glob: true
+  skip_cleanup: true
+  on:
+    tags: true

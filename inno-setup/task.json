@@ -1,0 +1,57 @@
+{
+    "id": "603c728e-3c50-4313-a9b1-183225889470",
+    "name": "inno-setup",
+    "version": {
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 0
+    },
+    "description": "Run Inno Setup Complier",
+    "author": "Echizen Ryoma",
+    "category": "Build",
+    "execution": {
+        "PowerShell": {
+            "argumentFormat": "",
+            "platforms": [
+                "windows"
+            ],
+            "target": "$(CurrentDirectory)\\inno-setup.ps1",
+            "workingDirectory": ""
+        }
+    },
+    "friendlyName": "Inno Setup",
+    "helpMarkDown": "Run Inno Setup [More Information](https://github.com/echizenryoma/inno-setup-extension)",
+    "inputs": [
+        {
+            "name": "ScriptFile",
+            "label": "Inno Setup Scripts (*.iss)",
+            "required": "true",
+            "type": "FilePath"
+        },
+        {
+            "name": "Arguments",
+            "defaultValue": "",
+            "helpMarkDown": "Arguments to Complier Inno Setup Scripts",
+            "label": "Arguments",
+            "required": "false",
+            "type": "String"
+        }
+    ],
+    "instanceNameFormat": "Inoo-Setup",
+    "links": {
+        "home": {
+            "uri": "https://github.com/echizenryoma/inno-setup-extension"
+        },
+        "issues": {
+            "uri": "https://github.com/echizenryoma/inno-setup-extension/issues"
+        },
+        "repository": {
+            "uri": "https://github.com/echizenryoma/inno-setup-extension"
+        }
+    },
+    "minimumAgentVersion": "2.0.0",
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/echizenryoma/inno-setup-extension"
+    }
+}

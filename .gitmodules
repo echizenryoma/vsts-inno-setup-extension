@@ -1,0 +1,7 @@
+[submodule "ispack"]
+	path = ispack
+	url = https://github.com/jrsoftware/ispack.git
+	branch = 155d691d0f3642d3202146099d6c5e790a1b1258
+[submodule "issrc"]
+	path = issrc
+	url = https://github.com/jrsoftware/issrc.git

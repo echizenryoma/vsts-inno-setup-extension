@@ -1,0 +1,49 @@
+{
+    "id": "vsts-inno-setup-extension",
+    "name": "Inno Setup Build Task",
+    "version": "5.5.9",
+    "description": "Tasks for running Inno Setup scripts to produce installers.",
+    "categories": [
+        "Build and release"
+    ],
+    "content": {
+        "details": {
+            "path": "README.md"
+        },
+        "license": {
+            "path": "LICENSE"
+        }
+    },
+    "contributions": [
+        {
+            "id": "603c728e-3c50-4313-a9b1-183225889470",
+            "properties": {
+                "name": "inno-setup"
+            },
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "type": "ms.vss-distributed-task.task"
+        }
+    ],
+    "files": [
+        {
+            "path": "inno-setup"
+        }
+    ],
+    "icons": {
+        "default": "extension-icon.png"
+    },
+    "manifestVersion": 1,
+    "public": false,
+    "publisher": "echizenryoma",
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/echizenryoma/inno-setup-extension"
+    },
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ]
+}
