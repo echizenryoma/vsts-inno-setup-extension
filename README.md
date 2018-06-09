@@ -6,7 +6,7 @@ Inno Setup build extension for VSTS
 
 This extension can be used to build Inno Setup script or to make Inno Setup available for other tasks (as an environment variable).
 
-[Unicode Inno Setup](http://www.jrsoftware.org/isinfo.php) version used is version 5.5.9
+[Unicode Inno Setup](http://www.jrsoftware.org/isinfo.php) version used is version 5.6.0
 
 ## License
 
